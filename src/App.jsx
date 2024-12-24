@@ -19,6 +19,12 @@ import assets from './assets/assets';
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
+  const [cartCount, setCartCount] = useState(0);
+
+  const addToCart = () => {
+    setCartCount(cartCount + 1);
+  };
+
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle("dark");
@@ -35,9 +41,11 @@ const App = () => {
     image: assets.blogs[blog.image] || blog.image
   }));
 
+  
+
   return (
     <div className={`min-h-screen ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
-      <Navbar />
+      <Navbar cartCount={cartCount}  />
       <br />
       <Hero />
       <Banner />
@@ -50,7 +58,7 @@ const App = () => {
         subtitle="Explore Our Products"
       />
 
-      <Products products={mappedProductData} />
+      <Products products={mappedProductData} addToCart={addToCart} />
       <Services2 />
 
       <SectionHeader
