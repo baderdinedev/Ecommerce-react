@@ -25,13 +25,13 @@ const Shop = ({ addToCart }) => { // Receive addToCart as a prop
         <h1 className="text-3xl font-bold mb-6">Shop</h1>
 
         {/* Filter Toggle */}
-        <button
+        {/* <button
           onClick={toggleFilter}
           className="fixed top-4 right-4 p-3 rounded-full shadow-lg bg-primary dark:bg-gray-800 text-white hover:bg-primary-dark dark:hover:bg-gray-700 transition"
           aria-label="Toggle Filters"
         >
           {isFilterOpen ? <FiX size={24} /> : <FiFilter size={24} />}
-        </button>
+        </button> */}
 
         {/* Filter Sidebar */}
         <div

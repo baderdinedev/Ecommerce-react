@@ -23,10 +23,12 @@ const App = () => {
     <Router>
       <div className={`min-h-screen ${isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"}`}>
         <Navbar cartCount={cartCount} />
+        
         <Routes>
           <Route path="/" element={<Home addToCart={addToCart} />} />
-          <Route path="/shop" element={<Shop addToCart={addToCart} />} /> {/* Pass addToCart to Shop */}
+          <Route path="/shop" element={<Shop addToCart={addToCart} />} />
         </Routes>
+        
         <Footer />
 
         <div className="fixed bottom-4 right-4">
