@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Use Link for navigation
+import { Link } from 'react-router-dom';  
 import { IoMdSearch } from "react-icons/io";
 import { IoBasketSharp } from "react-icons/io5";
 

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux'; // Import Redux hooks
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
@@ -7,16 +8,17 @@ import Shop from './pages/Shop/Shop';
 import { FiSun, FiMoon } from "react-icons/fi";
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const [cartCount, setCartCount] = useState(0);
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
+  const cartCount = useSelector(state => state.cartCount); // Get cart count from Redux
+  const dispatch = useDispatch();
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle("dark");
   };
 
-  const addToCart = () => {
-    setCartCount(cartCount + 1);
+  const addToCart = (item) => {
+    dispatch({ type: 'ADD_TO_CART', payload: item });
   };
 
   return (
