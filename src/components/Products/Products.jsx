@@ -12,9 +12,9 @@ const Products = ({ products }) => {
               data-aos="fade-up"
               data-aos-delay={index * 200}
               className="group aos-init aos-animate"
-              initial={{ y: 50 }} // Initial position (off-screen)
-              animate={{ y: 0 }}   // Animated position (onscreen)
-              transition={{ duration: 0.5, ease: "easeOut" }} // Animation properties
+              initial={{ y: 50 }} 
+              animate={{ y: 0 }}   
+              transition={{ duration: 0.5, ease: "easeOut" }} 
             >
               <div className="relative">
                 <img

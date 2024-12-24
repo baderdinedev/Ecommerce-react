@@ -1,0 +1,38 @@
+[
+    {
+      "image": "Smartwatch",
+      "name": "Boat Headphone",
+      "price": 120
+    },
+    {
+      "image": "WirelessMouse",
+      "name": "Wireless Mouse",
+      "price": 150
+    },
+    {
+      "image": "GamingLaptop",
+      "name": "Gaming Laptop",
+      "price": 800
+    },
+    {
+      "image": "PortableCharger",
+      "name": "Portable Charger",
+      "price": 60
+    },
+    {
+      "image": "BluetoothSpeaker",
+      "name": "Bluetooth Speaker",
+      "price": 100
+    },
+    {
+      "image": "SmartWatch",
+      "name": "Smart Watch",
+      "price": 280
+    },
+    {
+      "image": "Earbuds",
+      "name": "Earbuds",
+      "price": 70
+    }
+  ]
+  
